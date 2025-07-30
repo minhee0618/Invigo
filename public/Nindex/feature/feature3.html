@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>InviGo - 참석 관리</title>
+  <link rel="stylesheet" href="/Nindex.css">
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    .feature-detail-page {
+      width: 80vw;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    .feature-detail-page h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-detail-page p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .feature-image {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+
+    .feature-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .feature-list {
+      text-align: left;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li::before {
+      content: "📋";
+      margin-right: 8px;
+      color: orange;
+    }
+
+    .feature-list li {
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .cta-create {
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #666;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .cta-create:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="feature-detail-page">
+    <h1>참석 관리</h1>
+    <p>
+      초대받은 사람들의 참석 여부를 손쉽게 확인하세요.<br>
+      참석 여부, 이름, 이메일, 리마인더 여부까지 실시간으로 수집하고 관리할 수 있습니다.
+    </p>
+
+    <div class="feature-image">
+      <img src="/image/feature3-example.png" alt="RSVP 참석관리 예시 이미지">
+    </div>
+
+    <ul class="feature-list">
+      <li>초대장에 RSVP 폼 자동 포함</li>
+      <li>참석/불참 여부 수집 (Yes/No)</li>
+      <li>참석자의 이름, 이메일, 리마인더 수신 동의 항목 입력</li>
+      <li>Firebase에 RSVP 데이터 저장</li>
+      <li>관리자 통계 페이지에서 참석 현황 그래프로 확인 가능</li>
+    </ul>
+
+    <button class="cta-create" onclick="location.href='/Ncreate/Ncreate.html'">초대장 만들러 가기</button>
+  </div>
+
+</body>
+</html>

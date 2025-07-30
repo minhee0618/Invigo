@@ -1,0 +1,520 @@
+body {
+  margin: 1.5rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+/**header*/
+.view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#444;
+  color: white;
+  padding: 1.5rem;
+  border-bottom: 1px solid #333;
+}
+.view-header h1 {
+  margin: 0.2rem;
+  font-size: 1.5rem;
+}
+.user-info {
+  position: relative;
+  display: inline-block;
+  margin-right: 2rem;
+}
+#icon-member {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  filter: brightness(0) invert(1); 
+}
+/**dashboard*/
+.dashboard {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem 2rem;
+  margin: 1rem 3rem;
+}
+.dashboard-btn {
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dashboard-btn:hover {
+  background-color:	#C8C6D7;
+}
+/**share card*/
+.share-card{
+  padding: 1.5rem 2rem;
+  margin: 1rem 3rem;
+  border: 2px solid #B3AFC3;
+  border-radius: 12px;
+}
+.preview-container,.sub-container {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem auto;
+  background-color: #fafafa;
+  box-shadow: 0 4px 10px rgba(179,175,195,0.4);
+}
+.preview-container h3, .sub-container h3{
+  color: #555;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+.preview-container img{
+  width: 65rem;
+  height: auto;
+}
+.preview-page-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  z-index: 0; /* 배경은 뒤에 */
+}
+#preview-image {
+  position: relative;
+  z-index: 1; /* 이미지가 앞에 와야 함 */
+}
+.rsvp-section.show, .survey-section.show {
+  display: block;
+}
+.rsvp-section, .survey-section {
+  margin: 1rem auto;
+  padding: 1rem;
+}
+.rsvp-section label{
+  display: block;
+  color: #555;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+.rsvp-section input[type="text"],
+.rsvp-section input[type="email"] {
+  pointer-events: none;
+  width: 50%;
+  border: 1px solid #666;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+}
+.rsvp-reminder {
+  margin: 1rem;
+  font-size: 0.9rem;
+}
+.rsvp-reminder label {
+  display: block;
+  padding: 0;
+  align-items: center;
+  font-size: 1rem;
+  color: #555;
+}
+#rsvpReminder{
+  pointer-events: none;
+  margin: 1rem;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.rsvp-buttons {
+  margin: 3rem auto;
+}
+.rsvp-choice {
+  display: inline-block;
+  margin: 2rem;
+  padding: 1.2rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1px solid  #B3AFC3;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.rsvp-choice:hover, .survey-option:hover {
+  background-color:  #B3AFC3;
+}
+.survey-question-block p {
+  display: block;
+  font-size: 1.1rem;
+  margin: 2rem;
+  padding: 0.5rem 0;
+  font-weight: 800;
+  color: #555;
+}
+.hidden {
+  display: none;
+}
+input[type="radio"] {
+  display: none;
+}
+.survey-option {
+  display: block;
+  width: 70%;
+  margin: 1.5rem auto;
+  padding: 1rem 1.6rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 1px solid #B3AFC3;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#finalSubmitBtn{
+  padding: 1rem 2.8rem;
+  margin: 1rem;
+  margin-bottom: 3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 1px solid #B3AFC3;
+  background-color: #777;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#finalSubmitBtn:hover {
+  color: white;
+  background-color: #222;
+}
+/**message-card*/
+.message-card {
+  text-align: center;
+  padding: 3.5rem 2rem;
+  margin: 4rem 3rem;
+  border: 2px solid #B3AFC3;
+  background-color: #B3AFC3;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.message-card-header {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #444;
+  transition: background-color 0.3s ease;
+}
+.message-card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 1.5rem;
+}
+.message-card:hover .message-card-body,
+.message-card:focus-within .message-card-body {
+  max-height: 20rem;
+  padding-bottom: 1.5rem;
+}
+.message-card input,
+.message-card textarea {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1.3rem;
+  font-size: 1rem;
+  border: 1px solid #B3AFC3;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: #fafafa;
+  transition: border-color 0.3s ease;
+}
+.message-card input:focus,
+.message-card textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+
+/* share-methods */
+.share-methods {
+  text-align: center;
+  margin-bottom: 5rem;
+  padding: 2rem;
+}
+.share-methods h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  color: #444;
+}
+.share-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.share-methods button {
+  width: 15rem;
+  margin: auto;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  border: 2px solid rgb(180, 177, 196);
+  background-color: #999;
+  transition: background-color 0.3s ease;
+}
+.share-methods button:hover {
+  background-color: #B3AFC3;
+}
+
+.linkPopup,.qrPopup,
+.kakoPopup,.facebookPopup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  background-color: rgba(180, 177, 196, 0.3);
+  z-index: 999;
+}
+.linkPopup .popup-content, .qrPopup .popup-content,
+.kakoPopup .popup-content, .facebookPopup .popup-content  {
+  background-color: #fff;
+  padding: 4rem;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+}
+#linkPopupClose, #qrPopupClose,
+#kakaoPopupClose, #facebookPopupClose,
+#KakaoSharePopupClose, #facebookSharePopupClose{
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.popup-content h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+#link-link, #qr-link, 
+#kakao-link, #facebook-link {
+  width: 90%;
+  padding: 1.3rem;
+  font-size: 0.95rem;
+  border: 1px solid #B3AFC3;
+  border-radius: 6px;
+}
+#linkCopyBtn, #qrCopyBtn,
+#kakaoCopyBtn, #facebookCopyBtn {
+  margin: 4rem auto 1rem;
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.qr-area {
+  display: flex;              
+  justify-content: center;    
+  align-items: center; 
+  margin: 3rem;
+}
+#qrPopup img{
+  width: 18rem;
+}
+.hidden {
+  display: none;
+}
+
+/**kakao,facebook OG*/
+#kakaoOGSection, #kakaoShareSection,
+#facebookOGSection, #facebookShareSection{
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+#kakaoOGSection, #facebookOGSection {
+  position: relative;
+  display: block;
+  transform: translateX(0%);
+}
+#kakaoSaveBtn, #kakaoSkipBtn,
+#facebookSaveBtn, #facebookSkipBtn {
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  margin: 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#kakaoSaveBtn, #facebookSaveBtn {
+  background-color: #333;
+  color: white;
+}
+#kakaoSaveBtn:hover, #facebookSaveBtn:hover {
+  background-color: #111;
+}
+#kakaoSkipBtn, #facebookSkipBtn {
+  background-color: #888;
+  color: #333;
+}
+#kakaoSkipBtn:hover, #facebookSkipBtn:hover {
+  background-color: #B3AFC3;
+}
+
+#kakaoShareSection, #facebookShareSection {
+  display: none;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+#kakaoShareSection button, #facebookShareSection button {
+  margin: 4rem 1rem 1rem;
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+#kakaoShareSection button:hover, #facebookShareSection button:hover {
+  background-color: #333;
+}
+/**kakao*/
+#kakaoOGSection p{
+  font-size: 0.9rem;
+}
+.kakaoOG-preview {
+  width: 45rem;
+  height: 25rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  margin: 4rem auto;
+  cursor: pointer;
+}
+.kakaoOG-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 17rem;
+  background-color: #C8C6D7;
+  background-size: cover;
+  background-position: center;
+  color: #777;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.kakaoOG-title {
+  padding: 1.3rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #111;
+  background-color: #fff;
+}
+.kakaoOG-desc {
+  padding: 0;
+  font-size: 0.95rem;
+  color: #555;
+  background-color: #fff;
+}
+.kakaoOG-url {
+  padding: 0.4rem;;
+  font-size: 0.8rem;
+  color: #888;
+  background-color: #fff;
+}
+.kakaoOG-title,
+.kakaoOG-desc,
+.kakaoOG-url {
+  user-select: text;
+  pointer-events: auto;
+  min-height: 1.2em;
+  line-height: 1.5;
+  cursor: text;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+.kakaoOG-title[contenteditable="true"]:focus,
+.kakaoOG-desc[contenteditable="true"]:focus,
+.kakaoOG-url[contenteditable="true"]:focus {
+  outline: 2px solid #444;
+  background-color: #999;
+}
+/* facebook */
+.facebookOG-preview {
+  display: flex;
+  width: 85%;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.08);
+  margin: 20px auto;
+  overflow: hidden;
+}
+.facebookOG-image {
+  width: 65%;
+  background-color: #ddd;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 0.9rem;
+  text-align: center;
+  cursor: pointer;
+}
+.facebookOG-title {
+  font-weight: bold;
+  color: #111;
+}
+.facebookOG-url {
+  color: #888;
+}
+.facebookOG-desc {
+  color: #444;
+}
+.facebookOG-title,
+.facebookOG-desc,
+.facebookOG-url {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  user-select: text;
+  pointer-events: auto;
+  cursor: text;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+.facebookOG-preview > div:not(.facebookOG-image) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  padding: 2rem;
+  width: 30%;
+  box-sizing: border-box;
+}
+.facebookOG-title[contenteditable="true"]:focus,
+.facebookOG-desc[contenteditable="true"]:focus,
+.facebookOG-url[contenteditable="true"]:focus {
+  outline: 2px solid #444;
+  background-color: #999;
+}

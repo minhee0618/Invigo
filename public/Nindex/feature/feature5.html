@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>InviGo - 멀티미디어 통합기능</title>
+  <link rel="stylesheet" href="/Nindex.css">
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    .feature-detail-page {
+      width: 80vw;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    .feature-detail-page h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-detail-page p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .feature-image {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+
+    .feature-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .feature-list {
+      text-align: left;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li::before {
+      content: "🎵";
+      margin-right: 8px;
+      color: #ffcc00;
+    }
+
+    .feature-list li {
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .cta-create {
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #666;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .cta-create:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="feature-detail-page">
+    <h1>멀티미디어 통합기능</h1>
+    <p>
+      이미지, 음악, 지도까지!<br>
+      InviGo는 다양한 멀티미디어 요소들을 초대장에 통합해 생동감 있는 연출을 도와줍니다.
+    </p>
+
+    <div class="feature-image">
+      <img src="/image/feature5-example.png" alt="멀티미디어 삽입 예시 이미지">
+    </div>
+
+    <ul class="feature-list">
+      <li>배경 이미지 및 장식 아이콘 삽입</li>
+      <li>배경음악 설정 및 미리 듣기 지원</li>
+      <li>카카오 지도 삽입 (아이콘 or 미니맵)</li>
+      <li>이미지 및 지도는 드래그 앤 드롭으로 자유 위치 조정 가능</li>
+      <li>모든 요소는 실시간으로 초대장에 반영</li>
+    </ul>
+
+    <button class="cta-create" onclick="location.href='/Ncreate/Ncreate.html'">초대장 만들러 가기</button>
+  </div>
+
+</body>
+</html>

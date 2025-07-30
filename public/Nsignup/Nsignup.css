@@ -1,0 +1,151 @@
+body {
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 50%;
+  margin: 4rem auto;
+  padding: 3rem;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(179, 175, 195, 0.1);
+}
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 3rem;
+}
+h3, label {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  padding: 1.6rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  background-color: #444; 
+  border: 1px solid #B3AFC3; 
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+input[type="text"]:not(:placeholder-shown),
+input[type="email"]:not(:placeholder-shown),
+input[type="password"]:not(:placeholder-shown) {
+  color: #111;
+  background-color: #B3AFC3; 
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+#signup-email-code{
+  width: 70%;
+  margin-right: 3%;
+}
+.signup-email-btn{
+  font-size: 0.9rem;
+  padding: 1.1rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  background-color: #555;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.signup-email-code-btn {
+  font-size: 0.9rem;
+  padding: 1.3rem 2rem;
+  background-color: #555;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.signup-email-btn:hover,
+.signup-email-code-btn:hover {
+  background-color: #B3AFC3;
+}
+.signup-btn {
+  width: 98%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 1rem;
+  margin: 2rem auto;
+  background-color: #666;
+  color: #fff;
+  border: 1px solid #B3AFC3;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.signup-btn:hover {
+  background-color: #B3AFC3;
+}
+.signup-sns-login {
+  text-align: center;
+  margin: 2rem auto;
+}
+.signup-sns-login p {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.signup-kakao-login {
+  width: 33%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1.4rem;
+  margin: 1rem;
+  background-color: #FEE500;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.signup-facebook-login {
+  width: 33%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1.4rem;
+  margin: 1rem;
+  background-color: #1877F2;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.login-link {
+  display: block;
+  text-align: center;
+  color: #aaa;
+  margin: 2rem 0;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.login-link:hover {
+  color: #fff;
+}

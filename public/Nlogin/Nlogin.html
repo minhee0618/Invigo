@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="Nlogin.css">
+</head>
+
+<body>
+<div class="header">
+  <button class="signup" onclick="location.href='/NSignup/Nsignup.html'">Sign Up</button>
+</div>
+
+<div class="container">
+  <h2>로그인</h2>
+
+  <form id="login-form">
+    <label for="login-email"> <h3>이메일</h3></label>
+    <input type="email" id="login-email" placeholder="이메일 입력" required></h3>
+  
+    <label for="login-password"> <h3>비밀번호</h3> 
+    <input type="password" id="login-password" placeholder="비밀번호 입력" required></h3>
+    
+    <button type="submit" class="login-btn">로그인</button>
+  </form>
+
+  <div class="login-sns">
+    <p> SNS 로그인</p>
+    <button class="login-kakao" onclick="window.location.href='http://localhost:3000/auth/kakao'">Kakao</button>
+    <button class="login-facebook">Facebook</button>
+  </div>
+  <a href="/NLogin/Npwreset/Npwreset.html" class="search-btn" target="_blank">비밀번호를 잊으셨습니까?</a>
+</div>  
+
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="/Nlogin/Nlogin.js"></script>
+</body>
+</html>

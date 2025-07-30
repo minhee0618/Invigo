@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InviGo</title>
+  <link rel="stylesheet" href="Nindex.css">  
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <div class="logo-icons">
+        <img src="/image/icon_wind.png" alt="icon2">
+        <img src="/image/icon_message.png" alt="icon1">      </div>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#preview">Preview</a></li>
+        <li><a href="#feature">Feature</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#review">Review</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="member">
+      <button class="login" onclick="location.href='/Nlogin/Nlogin.html'">Log in</button>
+      <button class="signup" onclick="location.href='/Nsignup/Nsignup.html'">Sign up</button> 
+    </div>
+  </header>
+
+  <div id="create" class="create-section">
+    <h1>Let's go InviGo </h1>
+    <h2>초대(Invite) 와 전송(Go) <br>스마트한 디지털 초대의 새로운 기준</h2>
+    <button class="create" onclick="location.href='/Ncreate/Ncreate.html'">Go to Create</button>
+  </div>
+
+  <div id="preview" class="preview-section">
+    <h2 class="preview-title">Preview</h2>
+    <div class="preview-container">
+      <button class="arrow" onclick="prevSample()">&#10094;</button>
+      <div class="preview-box"> <img src="/image/prevsam1.png" alt="Sample 1"></div>
+      <div class="preview-box"> <img src="/image/prevsam2.png" alt="Sample 2"></div>
+      <div class="preview-box"> <img src="/image/prevsam3.png" alt="Sample 3"></div>
+      <div class="preview-box"> <img src="/image/prevsam4.png" alt="Sample 4"></div>
+      <div class="preview-box"> <img src="/image/prevsam5.png" alt="Sample 5"></div>
+      <button class="arrow" onclick="nextSample()">&#10095;</button>
+    </div>
+  </div>
+
+  <div id="feature" class="feature-section">
+    <h2 class="feature-title">Feature</h2>
+    <div class="feature-container">
+      <div class="feature-box" onclick="location.href='feature/feature1.html'">실시간 커스터마이징 <br> 제작</div>
+      <div class="feature-box" onclick="location.href='feature/feature2.html'">AI 이미지 생성 기능</div>
+      <div class="feature-box" onclick="location.href='feature/feature3.html'">드래그 편집</div>
+      <div class="feature-box" onclick="location.href='feature/feature4.html'">초대 응답 통계</div>
+      <div class="feature-box" onclick="location.href='feature/feature5.html'">링크 & QR <br> 카카오톡 & 페이스북 공유</div>
+      <div class="feature-box" onclick="location.href='feature/feature6.html'">캘린더 연동 <br> 리마인더 이메일 발송</div> 
+    </div>
+  </div>
+
+  <div id="faq" class="faq-section">
+    <h2 class="faq-title">FAQ</h2>
+    <div class="faq-container">
+      <div class="faq-q" onclick="toggleFAQ(this)"> Q1. 초대장은 어떻게 공유하나요?</div>
+      <div class="faq-a">A1. 링크 QR 카카오톡 페이스북을 통해 공유가 가능해요 <br> 카카오톡과 페이스북은 공유시 보이는 이미지와 문구를 작성할 수 있습니다</div>
+      <div class="faq-q" onclick="toggleFAQ(this)">Q2. 참석자 응답은 어디서 확인할 수 있나요?</div>
+      <div class="faq-a"> A2. 대시보드에서 실시간으로 확인이 가능합니다 <br> 참석여부, 메시지, 설문통계까지 한눈에 정리되어 있습니다</div>
+      <div class="faq-q" onclick="toggleFAQ(this)">Q3. 초대장을 만들때 꼭 회원가입을 해야하나요?</div>
+      <div class="faq-a"> A1. 아니요, 초대장은 비회원도 만들수 있습니다 <br> 다만 응답관리는 관리가 불가능 합니다 </div>
+    </div>
+  </div>
+
+  <div id="review" class="review-section">
+    <h2 class="review-title">Review</h2>
+    <div class="review-container">
+      <button class="review-arrow" onclick="prevReview()">&#10094</button>
+      <div class="review-card">
+        <p>user1@email.com</p>
+        <p class="review-star">★★★★★</p>
+        <p class="review-text">너무 편해요</P>
+      </div>
+      <div class="review-card">
+        <p>user2@email.com</p>
+        <p class="review-star">★★★★</p>
+        <p class="review-text">디자인 이뻐요</p>
+      </div>
+      <div class="review-card">
+        <p>user3@email.com</p>
+        <p class="review-star">★★★★★★</p>
+        <p class="review-text">관리가 쉬워여</p>
+      </div>
+      <div class="review-card">
+        <p>user4@email.com</p>
+        <p class="review-star">★★★★</p>
+        <p class="review-text">AI 기능 굳</p>
+      </div>
+      <div class="review-card">
+        <p>user5@email.com</p>
+        <p class="review-star">★★★</p>
+        <p class="review-text">최고에요</p>
+      </div>
+      <button class="review-arrow" onclick="nextReview()">&#10095</button>
+    </div>
+    <div class="review-submit">
+      <button class="review-submit-btn" onclick="openReviewForm()"> 리뷰 작성하기</button>
+      <div class="review-form">
+        <h3>리뷰 작성</h3>
+        <input type="email" placeholder="이메일 입력" required>
+        <select>
+          <option value="1">★</option>
+          <option value="2">★★</option>
+          <option value="3">★★★</option>
+          <option value="4">★★★★</option>
+          <option value="5">★★★★★</option>
+        </select>
+        <textarea placeholder="리뷰를 작성해주세요" rows="3"></textarea>
+        <div class="review-form-btns">
+          <button class="review-submit-ok" onclick="closeReviewForm()" >등록</button>
+          <button class="review-close" onclick="closeReviewForm()">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="aboutus"class="aboutus-section">
+    <h2 class="aboutus-title">About US</h2>
+    <p>Let's Go InviGo는 사용자의 개성을 담은 디지털 초대장을 제공합니다
+    <br>쉽고 빠르게 초대장을 만들고 전송하세요</p>
+    <div class="aboutus-feature-container">
+      <div class="aboutus-icon" onclick="flipCard(this)">
+        <div class="aboutus-front">쉽게,직관적으로</div>
+        <div class="aboutus-back">복잡한 과정 없이<br>누구나 바로 시작할 수 있어요.</div>
+      </div>
+      <div class="aboutus-icon" onclick="flipCard(this)">
+        <div class="aboutus-front">나답게,감각적으로</div>
+        <div class="aboutus-back">폰트, 색상, 이미지까지 <br> 내 스타일로 자유롭게 꾸며요.</div>
+      </div>
+      <div class="aboutus-icon" onclick="flipCard(this)">
+        <div class="aboutus-front">누구에게나, 클릭으로</div>
+        <div class="aboutus-back">링크, QR, 카카오톡, 페이스북으로<br> 쉽고 빠르게 전달돼요.</div>
+      </div>
+      <div class="aboutus-icon" onclick="flipCard(this)">
+        <div class="aboutus-front">응답도,통계도 자동으로</div>
+        <div class="aboutus-back">설문 응답을 <br>실시간으로 한눈에 확인할 수 있어요.</div>
+      </div>
+    </div>
+
+    <div class="aboutus-team">
+      <h3>개발자 소개</h3>
+      <p class="team-member"> 김민희(성결대 컴퓨터공학과 20190814) | 개발자 <br> <br> 세상을 편리하게 만드는 기술</p>
+    </div>
+    <div class="aboutus-timeline">
+      <h3>타임라인</h3>
+      <p class="timeline-item">2025.01 Let's go InviGo 서비스 개발</p>
+      <p class="timeline-item">2025.05 웹서비스 런칭</p>
+    </div>
+    <button class="cta-create" onclick="location.href='/Ncreate/Ncreate.html'">Go to Create</button>
+  </div>
+
+  <footer>
+    <p class="footer-text">SNS에서 InviGo의 최신소식과 정보를 확인해 보세요 !</p>
+    <div class="footer-sns">
+      <a href="https://www.instagram.com" target="_blank" class="link-instagram"><img src="/image/icon_Instagram.png" alt="instagram"></a>
+      <a href="https://www.facebook.com" target="_blank" class="link-facebook"><img src="/image/icon_Facebook.png" alt="facebook"></a>
+      <a href="https://www.Youtube.com" target="_blank" class="link-youtube"><img src="/image/icon_Youtube.png" alt="Youtube"></a>
+    </div>
+    <p class="footer-copyright">&copy; 2025 Let's Go InviGo. All rights reserved</p>
+  </footer>
+
+
+<script src="Nindex.js"></script>
+</body>
+</html>

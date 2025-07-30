@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>InviGo - 초대장 열람 통계</title>
+  <link rel="stylesheet" href="/Nindex.css">
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    .feature-detail-page {
+      width: 80vw;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    .feature-detail-page h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-detail-page p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .feature-image {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+
+    .feature-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .feature-list {
+      text-align: left;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li::before {
+      content: "📊";
+      margin-right: 8px;
+      color: #4dd0e1;
+    }
+
+    .feature-list li {
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .cta-create {
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #666;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .cta-create:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="feature-detail-page">
+    <h1>초대장 열람 통계</h1>
+    <p>
+      초대장을 누가 얼마나 자주 열람했는지 확인할 수 있어요.<br>
+      열람 기록은 자동 저장되며, 관리자 페이지에서 실시간 확인 가능합니다.
+    </p>
+
+    <div class="feature-image">
+      <img src="/image/feature6-example.png" alt="초대장 열람 통계 예시 이미지">
+    </div>
+
+    <ul class="feature-list">
+      <li>초대장 열람 시 자동으로 기록 저장</li>
+      <li>IP, 시간, 브라우저 정보 수집 가능</li>
+      <li>Firebase 또는 DB 기반 실시간 통계 저장</li>
+      <li>조회수 그래프, 날짜별 열람 수 시각화</li>
+      <li>참석 통계와 연동 가능 (RSVP와 결합)</li>
+    </ul>
+
+    <button class="cta-create" onclick="location.href='/Ncreate/Ncreate.html'">초대장 만들러 가기</button>
+  </div>
+
+</body>
+</html>

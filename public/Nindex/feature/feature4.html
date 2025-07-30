@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>InviGo - 일정 캘린더 연동</title>
+  <link rel="stylesheet" href="/Nindex.css">
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    .feature-detail-page {
+      width: 80vw;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    .feature-detail-page h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-detail-page p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .feature-image {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+
+    .feature-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .feature-list {
+      text-align: left;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li::before {
+      content: "📆";
+      margin-right: 8px;
+      color: lightgreen;
+    }
+
+    .feature-list li {
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .cta-create {
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #666;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .cta-create:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="feature-detail-page">
+    <h1>일정 캘린더 연동</h1>
+    <p>
+      초대장 내용을 Google Calendar에 바로 추가하세요.<br>
+      중요한 일정을 자동으로 저장하고 잊지 않도록 도와줍니다.
+    </p>
+
+    <div class="feature-image">
+      <img src="/image/feature4-example.png" alt="일정 캘린더 연동 예시 이미지">
+    </div>
+
+    <ul class="feature-list">
+      <li>초대장 내 일정 버튼 클릭 시 Google Calendar 열기</li>
+      <li>제목, 시간, 장소, 설명 자동 입력</li>
+      <li>모바일과 데스크탑 모두에서 연동 가능</li>
+      <li>링크를 통해 타 캘린더 앱과도 호환 가능</li>
+      <li>약속 및 미팅 잊지 않도록 알림 기능 활용</li>
+    </ul>
+
+    <button class="cta-create" onclick="location.href='/Ncreate/Ncreate.html'">초대장 만들러 가기</button>
+  </div>
+
+</body>
+</html>

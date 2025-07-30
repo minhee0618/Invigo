@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>마이페이지 - InviGo</title>
+  <link rel="stylesheet" href="/Nmy/Nmy.css" />
+</head>
+<body>
+
+
+ <!-- 상황 A: 비로그인 안내 -->
+ <section class="guest-mode" style="display: none;">
+  <header class="my-header">
+    <h1>마이페이지</h1>
+    <a id="backToDashboard" class="back-link">← 돌아가기</a>
+  </header>
+  <h2>로그인하지 않으셨습니다</h2>
+  <p>로그인을 하면 초대장을 저장하고 관리할 수 있습니다.</p>
+  <a href="/Nlogin/Nlogin.html" class="login-button">로그인</a>
+
+  <div class="current-preview">
+    <h3>현재 보고 있는 초대장</h3>
+    <p><strong>초대장 ID:</strong> <span id="preview-id">-</span></p>
+  </div>
+</section>
+
+<!-- 상황 B: 로그인 사용자 영역은 추후 표시 -->
+<section class="user-mode">
+  <header class="my-header">
+    <h1>마이페이지</h1>
+    <div class="settings-menu">
+      <img src="/image/icon-member.png" alt="설정" class="settings-icon" />
+      <div class="settings-dropdown hidden" id="settingsDropdown">
+        <p><strong>이름: </strong> <span id="user-name">-</span></p>
+        <p><strong>이메일: </strong> <span id="user-email">-</span></p>
+        <button id="logoutBtn" class="logout-btn">로그아웃</button>
+      </div>
+    </div>
+  </header>
+
+  <h2>내 초대장 목록</h2>
+  <ul id="invitationList">
+    <!-- JS에서 동적으로 초대장 목록이 여기에 삽입됨 -->
+  </ul>
+
+  <div class="create-invite">
+    <button class="create-invite-btn" onclick="location.href='/Ncreate/Ncreate.html'">➕ 초대장 생성하러 가기</button>
+  </div>
+
+</section>
+
+  <script  type="module" src="/Nmy/Nmy.js"></script>
+</body>

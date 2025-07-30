@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>signup</title>
+  <link rel="stylesheet" href="Nsignup.css">
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAvUQ7igS4lvz_8h-WxgHdyT_GgulZKksg",
+      authDomain: "nproject2025-88217.firebaseapp.com",
+      projectId: "nproject2025-88217",
+      storageBucket: "nproject2025-88217.appspot.com",
+      messagingSenderId: "512743121549",
+      appId: "1:512743121549:web:86a08842265cfcb3e1f8c4",
+      measurementId: "G-LTGD9Z8QP9"
+    };
+  
+    // Firebase 초기화
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>회원가입</h2>
+    <form id="signup-form">
+      <label for="signup-name"><h3>이름</h3></label>
+      <input type="text" id="signup-name" placeholder="이름 입력" required />
+
+      <label for="signup-email"><h3>이메일</h3></label>
+      <input type="email" id="signup-email" placeholder="이메일 입력" required />
+      <button type="button" class="signup-email-btn">이메일 인증 번호 요청</button>
+
+      <label for="signup-email-code"><h3>이메일 코드 입력</h3></label>
+      <input type="text" id="signup-email-code" placeholder="인증 코드 6자리 입력" maxlength="6" required />
+      <button type="button" class="signup-email-code-btn">인증</button>
+
+
+      <label for="signup-password"><h3>비밀번호</h3></label>
+      <input type="password" id="signup-password" placeholder="비밀번호 입력" required />
+
+      <label for="signup-password-confirm"><h3>비밀번호 확인</h3></label>
+      <input type="password" id="signup-password-confirm" placeholder="비밀번호 확인" required />
+    </form>
+
+    <button type="button" class="signup-btn">회원가입</button>
+    
+    <div class="signup-sns-login">
+      <p>SNS 계정으로 가입</p>
+      <button class="signup-kakao-login" onclick="window.location.href='http://localhost:3000/auth/kakao'">Kakao</button>
+      <button class="signup-facebook-login" onclick="window.location.href='http://localhost:3000/auth/facebook'">Facebook</button>
+    </div>
+
+    <a href="/Nlogin/Nlogin.html" class="login-link">
+      이미 계정이 있으신가요?<br />로그인 하러 가기
+    </a>
+  </div>
+  <script src="/Nsignup/Nsignup.js"></script>
+</body>
+</html>

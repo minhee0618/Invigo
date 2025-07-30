@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>InviGo - QR코드 & 링크 공유</title>
+  <link rel="stylesheet" href="/Nindex.css">
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    .feature-detail-page {
+      width: 80vw;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    .feature-detail-page h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-detail-page p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .feature-image {
+      margin: 40px auto;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+
+    .feature-image img {
+      width: 100%;
+      display: block;
+    }
+
+    .feature-list {
+      text-align: left;
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li::before {
+      content: "🔗";
+      margin-right: 8px;
+      color: lightblue;
+    }
+
+    .feature-list li {
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .cta-create {
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #666;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .cta-create:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="feature-detail-page">
+    <h1>QR코드 & 링크 공유</h1>
+    <p>
+      생성한 초대장을 쉽게 공유하세요.<br>
+      고유 링크와 QR코드를 제공하여, 누구든 어디서든 접속할 수 있어요.
+    </p>
+
+    <div class="feature-image">
+      <img src="/image/feature2-example.png" alt="QR코드와 공유 링크 예시 이미지">
+    </div>
+
+    <ul class="feature-list">
+      <li>초대장 링크 자동 생성 (고유 ID 기반)</li>
+      <li>QR코드 자동 생성 및 다운로드</li>
+      <li>복사 버튼으로 링크를 간편하게 클립보드에 저장</li>
+      <li>카카오톡 & Facebook 등 소셜 공유 기능 지원</li>
+      <li>링크로 초대장을 공유하면 언제든지 다시 접속 가능</li>
+    </ul>
+
+    <button class="cta-create" onclick="location.href='/Ncreate/Ncreate.html'">초대장 만들러 가기</button>
+  </div>
+
+</body>
+</html>

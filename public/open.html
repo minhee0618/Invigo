@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>초대장</title>
+  <link rel="stylesheet" href="/open.css">
+</head>
+<body>
+
+  <button id="GoogleCalendarBtn" >📅 구글 캘린더에 일정 추가</button>
+
+  <div class="blur-overlay hidden" id="blurOverlay"></div>
+
+  <div class="message-card hidden" id="messageCard">
+    <p id="recipientName" style="font-weight: bold; margin-bottom: 1rem;"></p>
+    <p id="messageText"></p>
+  </div>
+  
+  <div id="shareCardContainer"></div>
+
+  
+  <div class="comment-card">
+    <div class="comment-card-header">
+      <p>초대자에게 익명으로 메시지를 남겨보세요 ...</p>
+    </div>
+    <div class="comment-card-body">
+      <textarea id="annComment" placeholder="초대자에게 메세지를 남겨보세요 (50자 이내)" maxlength="50"></textarea>
+      <button id="comment-btn">Sent</button>
+    </div>
+  </div>
+
+  <script type="module" src="/open.js"></script>
+</body>
+</html>
